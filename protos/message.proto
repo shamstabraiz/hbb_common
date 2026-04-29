@@ -822,6 +822,11 @@ message MessageQuery {
   int32 switch_display = 1;
 }
 
+// BetterDesk: controlling peer requests flashlight/torch on/off on controlled device (mobile).
+message ToggleFlashCustom {
+  bool on = 1;
+}
+
 message Misc {
   oneof union {
     ChatMessage chat_message = 4;
@@ -859,6 +864,7 @@ message Misc {
     DisplayResolution change_display_resolution = 36;
     MessageQuery message_query = 37;
     int32 follow_current_display = 38;
+    ToggleFlashCustom toggle_flash_custom = 39;
   }
 }
 
